@@ -31,11 +31,10 @@ public class Menu extends World
         addObject(pressbutton3,760,340);
         addObject(pressbutton4,760,430);*/
 
-        
         PressButton pressbutton = new PressButton();
         addObject(pressbutton,734,290);
         pressbutton.setLocation(743,290);
-        
+
     }
     
     

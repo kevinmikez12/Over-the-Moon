@@ -8,15 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-
-   
+    private GreenfootSound musicMenu;
     
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 550, 1); 
+
         prepare();
-        
+    
     }
 
     private void prepare()
@@ -31,11 +31,10 @@ public class Menu extends World
         addObject(pressbutton3,760,340);
         addObject(pressbutton4,760,430);*/
 
-        
         PressButton pressbutton = new PressButton();
         addObject(pressbutton,734,290);
         pressbutton.setLocation(743,290);
-        
+
     }
     
     

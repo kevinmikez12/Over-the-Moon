@@ -30,6 +30,12 @@ public class LifeIzaro extends Actor
     public void modifyLives(){
         vida--;
         refreshLife();
+        if(vida ==0){//Si las vidas se agotan muestra en la pantalla gameover
+            World myWorld = getWorld();
+            GameOver gameover = new GameOver();
+            myWorld.addObject(gameover, myWorld.getWidth()/2,myWorld.getHeight()/2);
+            myWorld.removeObject(this);
+        }
     }
     
     public void refreshLife(){

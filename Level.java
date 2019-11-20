@@ -26,10 +26,10 @@ public class Level extends World
     {
         
         izaro = new Izaro();
-        addObject(izaro,55,520);
-        izaro.setLocation(50,512);
-        LifeIzaro lifeizaro = new LifeIzaro();
+        addObject(izaro,55,480);
+        izaro.setLocation(50,480);
+       /* LifeIzaro lifeizaro = new LifeIzaro();
         addObject(lifeizaro,480,37);
-        lifeizaro.setLocation(513,36);
+        lifeizaro.setLocation(513,36);*/
     }
 }

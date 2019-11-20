@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Plataforma extends Actor
 {
     public Plataforma(){
-        getImage().scale(getImage().getWidth()*6,getImage().getHeight());
+        getImage().scale(getImage().getWidth()*9,getImage().getHeight()+7);
     }
     public void act() 
     {

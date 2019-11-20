@@ -8,10 +8,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
+    int speed = -3;
+    int count = 0;
     public void act() 
     {
+        count ++;
+        moveAround();
         checkForCollisionsEnemy();
     }    
+    
+    public Enemy(){
+        getImage().scale(140,80);
+        getImage().mirrorHorizontally();
+    }
+    
+    public void moveAround(){
+        if(count <60)
+        setLocation(getX() + speed, getY());
+        else{
+            speed = -speed;
+            getImage().mirrorHorizontally();
+            count = 0;
+        }
+    }
         public void checkForCollisionsEnemy(){
         Actor Izaro =this.getOneIntersectingObject(Izaro.class);
         if( Izaro != null) {
@@ -23,4 +42,5 @@ public class Enemy extends Actor
             
         }
     }
+    
 }

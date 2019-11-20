@@ -29,7 +29,7 @@ public class Izaro extends LifeIzaro
     /*------------------------------------------------*/
     private int vSpeed = 0;
     private int acceleration = 1;
-    private int jumpHeight = -20; //que tan alto brincar
+    private int jumpHeight = -18; //que tan alto brincar
     /*------------------------------------------------*/
     //Variable para avanzar en el eje de las x
     private int speed = 4;
@@ -69,7 +69,7 @@ public class Izaro extends LifeIzaro
                animateRight();
             }
         }
-          if(Greenfoot.isKeyDown("space")){
+          if(Greenfoot.isKeyDown("space") && sobrePlataforma() == true){
            vSpeed = jumpHeight;
            fall();
         }
@@ -102,6 +102,8 @@ public class Izaro extends LifeIzaro
     public void checkFalling(){
         if(sobrePlataforma() == false){
             fall();}
+        if(sobrePlataforma() == true){
+            vSpeed = 0;}
     }
     /**---------------------------------------------------------------------------**/
     /** --- Desplazamiento del personaje ------- **/
